@@ -6,17 +6,16 @@
 }
 
 body {
-  background: url(/assets/images/bg-header-desktop.png);
+  background-image: url(/assets/images/bg-header-desktop.png);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top center;
+  background-size: contain;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 375px 0 375px;
+  margin-left: 2.313rem;
+  margin-right: 2.313rem;
 }
 
 .download {
@@ -27,7 +26,7 @@ body {
 }
 
 .download .logo {
-  height: 20.9rem;
+  height: 19em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +40,7 @@ body {
   max-width: 700px;
   text-align: center;
   font-size: 2.6rem;
-  line-height: 1.5rem;
+  line-height: 3rem;
   font-weight: 600;
   margin-bottom: 2.438rem;
   color: hsl(210, 10%, 33%);
@@ -59,6 +58,9 @@ body {
 
 .download .buttons {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 
@@ -73,8 +75,8 @@ body {
 .button-ios button,
 .button-mac button {
   border: none;
-  width: 226px;
-  border-radius: 31px;
+  width: 15rem;
+  border-radius: 2rem;
   padding: 1.125rem;
   font-size: 1rem;
   font-weight: 600;
@@ -106,6 +108,7 @@ body {
 
 .snippet-body {
   display: flex;
+  align-items: center;
   margin-bottom: 9rem;
 }
 
@@ -113,7 +116,7 @@ h2 {
   max-width: 700px;
   text-align: center;
   font-size: 2.3rem;
-  line-height: 1.5rem;
+  line-height: 2.6rem;
   font-weight: 600;
   margin-bottom: 2.438rem;
   color: hsl(210, 10%, 33%);
@@ -130,30 +133,28 @@ h2 {
 }
 
 .snippet-body-image {
-  display: flex;
-  align-items: center;
   width: 50%;
 }
 
 .snippet-body-image img {
-  width: auto;
+  width: 162%;
   position: relative;
-  left: -62%;
+  right: 64%;
 }
 
 .snippet-body-highlights {
   width: 50%;
-  padding-left: 85px;
-  margin-top: 48px;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: end;
+  margin-left: 10px;
 }
 
 .highlight .subtitle h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
+
   color: hsl(210, 10%, 33%);
 }
 
@@ -170,4 +171,122 @@ h2 {
   flex-direction: column;
   align-items: center;
   margin-bottom: 4.8rem;
+}
+
+.access img {
+  width: 100%;
+}
+
+.workflow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.workflow-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-body-highlights {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 90px;
+  margin-bottom: 7rem;
+}
+
+.workflow-body-highlights > .highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.workflow-body-highlights > .highlight img {
+  margin-bottom: 35px;
+}
+
+.workflow-body-highlights > .highlight h3,
+.tex {
+  text-align: center;
+  line-height: 1.8rem;
+  align-items: center;
+}
+
+.workflow-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+  row-gap: 90px;
+}
+
+.workflow-logos .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.download-2 .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+@media (max-width: 670px) {
+  .workflow-body-highlights {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .workflow-logos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .snippet-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .snippet-body-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .snippet-body-image img {
+    width: 95%;
+    position: static;
+  }
+
+  .snippet-body-highlights {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+  }
+
+  .highlight .subtitle h3 {
+    text-align: center;
+  }
+
+  .snippet-text {
+    text-align: center;
+    min-width: 20.938rem;
+  }
+}
+
+@media (max-width: 390px) {
+  body {
+    background-image: url(/assets/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+  }
 }
