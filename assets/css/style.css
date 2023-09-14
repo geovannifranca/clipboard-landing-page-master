@@ -368,7 +368,7 @@ footer {
 
 @media (max-width: 390px) {
   body {
-    background-image: url(/assets/images/bg-header-mobile.png);
+    background-image: url(../images/bg-header-mobile.png);
     background-repeat: no-repeat;
   }
 }
